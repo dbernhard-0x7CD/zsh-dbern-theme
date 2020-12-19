@@ -16,7 +16,7 @@ The bottom line is from tmux (terminal multiplexer).
 
 
 
-## Installation
+## Installation - Laptop
 
 * install zsh / (clone zsh, build and install)
 * clone oh-my-zsh
@@ -29,6 +29,22 @@ wget -P ~/.oh-my-zsh/themes https://raw.githubusercontent.com/dbernhard-0x7CD/zs
 ```
 * Set theme in *~/.zshrc*
     * `ZSH_THEME="dbern-laptop"`
+* `source ~/.zshrc`
+* For themes using UTF-8 characters (like mine below) it's necessary to use an UTF-8 locale (`localectl` returns something like " System Locale: LANG=en_US.UTF-8")
+
+## Installation - Server
+
+* install zsh / (clone zsh, build and install)
+* clone oh-my-zsh
+    * `wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh`
+    * `sh install.sh`
+* Download the theme sources
+
+```sh
+wget -P ~/.oh-my-zsh/themes https://raw.githubusercontent.com/dbernhard-0x7CD/zsh-dbern-theme/main/dbern.zsh-theme
+```
+* Set theme in *~/.zshrc*
+    * `ZSH_THEME="dbern"`
 * `source ~/.zshrc`
 * For themes using UTF-8 characters (like mine below) it's necessary to use an UTF-8 locale (`localectl` returns something like " System Locale: LANG=en_US.UTF-8")
 
