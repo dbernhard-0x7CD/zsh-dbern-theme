@@ -14,14 +14,14 @@ function battery_display {
     elif [[ $cap -gt 35 ]] then
         color_of_out="%{$fg[yellow]%}"
     else
-        color_of_out="%{^[[31m%}"
+        color_of_out="%{$fg[red]%}"
     fi
 
-    echo $color_of_out$cap"%{$reset_color%}"
+    echo -n -e "$color_of_out$cap%{$reset_color%}"
 }
 
 function display_loadaverage {
-    echo `cat /proc/loadavg | cut -d ' ' -f-3` 2>/dev/null
+    echo -n `cat /proc/loadavg | cut -d ' ' -f-3` 2>/dev/null
 }
 
 function get_date {
