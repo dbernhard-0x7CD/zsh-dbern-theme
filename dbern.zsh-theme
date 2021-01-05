@@ -8,7 +8,7 @@ _fishy_collapsed_wd() {
 }
 
 function display_loadaverage {
-    echo `cat /proc/loadavg | cut -d ' ' -f-3` 2>/dev/null
+    echo -n `cat /proc/loadavg | cut -d ' ' -f-3` 2>/dev/null
 }
 
 function get_date {
